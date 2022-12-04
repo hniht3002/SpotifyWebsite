@@ -1,0 +1,278 @@
+/* Global */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  /* NavBar */
+  --navbar-color: #b2b2b2;
+  --nav-bar-width: 241px;
+  --icon-size: 24px;
+  --btn-icon-size: 12px;
+  /* Header */
+  --header-color: rgb(179, 179, 179);
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* Reset CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Font */
+@font-face {
+  font-family: "CircularSp";
+  src: url("../font/CircularSp-Book.woff2");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "CircularSp";
+  src: url("../font/CircularSp-Bold.woff2");
+  font-weight: 800;
+}
+
+html body {
+  font-family: CircularSp, serif !important;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+
+/* Main */
+.wrapper {
+  display: flex;
+}
+/* Navbar */
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: var(--black);
+  color: #ddd;
+  padding: 24px 24px 0 32px;
+  height: 100vh;
+
+  max-width: 250px;
+  min-width: 250px;
+}
+.logo-wrapper {
+  padding-right: 24px;
+  padding-left: 6px;
+}
+
+.logo {
+  width: 130px;
+  height: 41px;
+}
+
+.pages {
+  font-size: 14px;
+  padding: 24px 0;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+}
+
+.page-icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.page-icon:hover > .icon {
+  fill: var(--white);
+}
+.page-icon:hover + .page-title {
+  cursor: default;
+  color: var(--white);
+}
+
+.icon {
+  fill: var(--navbar-color);
+  transition: 0.25s;
+}
+
+.page-title {
+  padding: 8px 18px 8px 16px;
+  flex: 1;
+  transition: 0.25s;
+}
+
+.page-title:hover {
+  cursor: default;
+  color: var(--white);
+}
+
+.buttons {
+  flex: 1;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 18px 8px 4px;
+}
+
+.nav-btn:hover {
+  color: var(--white);
+  cursor: default;
+  transition: 0.25s;
+}
+
+.nav-btn:hover > .btn-background.create {
+  background-color: var(--white) !important;
+}
+
+.nav-btn:hover .btn-icon.liked {
+  fill: var(--white);
+}
+
+.btn-icon {
+  height: var(--btn-icon-size);
+  width: var(--btn-icon-size);
+  transition: 0.25s;
+}
+
+.btn-icon.create {
+  fill: #7c7c7c;
+}
+
+.btn-icon.liked {
+  fill: #b2b2b2;
+}
+
+.btn-background {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.btn-background.create {
+  background-color: var(--navbar-color);
+}
+
+.btn-background.liked {
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+}
+
+.nav-btn-title {
+  padding-left: 16px;
+  flex: 1;
+}
+
+.legal {
+  margin: 32px 0;
+}
+
+.legal > a {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.legal > a:hover {
+  cursor: default;
+  text-decoration: underline;
+}
+
+/* Header */
+
+.content-section {
+  margin-left: 250px;
+  width: 100%;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0;
+  z-index: 10;
+  justify-content: space-between;
+  left: 250px;
+  right: 0;
+  overflow: hidden;
+}
+
+.button-navigate {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+.back,
+.next {
+  width: 32px;
+  height: 32px;
+  border-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  padding: 0px 4px;
+  cursor: not-allowed;
+}
+
+.next {
+  margin-left: 16px;
+}
+
+.navigate {
+  fill: var(--white);
+  width: 22px;
+  height: 22px;
+  opacity: 0.6;
+}
+
+.button-authen {
+  display: flex;
+  font-weight: 600;
+  color: var(--header-color);
+  margin-right: 16px;
+}
+
+.button-authen > p:nth-child(1) {
+  padding: 12px 32px 12px 8px;
+}
+
+.button-authen > p:nth-child(1):hover {
+  cursor: default;
+  color: var(--white);
+  font-weight: 800;
+}
+
+.button-authen > p:nth-child(2) {
+  padding: 12px 35px;
+  background-color: var(--white);
+  border-radius: 99px;
+  color: var(--black);
+}
+
+.button-authen > p:nth-child(2):hover {
+  font-weight: 800;
+  scale: 1.05;
+  cursor: default;
+}
+.content {
+  display: flex;
+  background-color: var(--header-color);
+  overflow-y: overlay;
+  padding-top: 70px;
+
+  height: 2000px;
+}
