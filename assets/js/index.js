@@ -32,5 +32,5 @@ const api = [
 ];
 
 const contentContainer = document.querySelector(".content .container");
-contentContainer.insertAdjacentHTML("beforeend", "<h1>Hello1</h1>");
-contentContainer.insertAdjacentHTML("beforeend", "<h1>Hello2</h1>");
+/* contentContainer.insertAdjacentHTML("beforeend", "<h1>Hello1</h1>");
+contentContainer.insertAdjacentHTML("beforeend", "<h1>Hello2</h1>"); */

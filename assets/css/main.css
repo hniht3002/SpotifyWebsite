@@ -276,3 +276,14 @@ html body {
 
   height: 2000px;
 }
+
+/* Items */
+.item-wrapper {
+  max-width: 220px;
+  max-height: 310px;
+}
+
+.image {
+  width: 188px;
+  object-fit: contain;
+}
